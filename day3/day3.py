@@ -79,3 +79,31 @@ for point in intersection_points:
         d2 = (abs(point[0]) + abs(point[1]))
 
 print(d2)
+
+
+rd = 1000000000
+for intersection_point in intersection_points:
+    print(intersection_point)
+
+    x_c = 0
+    y_c = 0
+    cs1 = 0
+    for command in df.w1:
+        print(command)
+        x_c_, y_c_ = make_step(x_c, y_c, command)
+        cs1 += abs(int(command[1:]))
+
+
+    x_c = 0
+    y_c = 0
+    cs2 = 0
+    while x_c != intersection_point[0]:
+        for command in df.w2:
+            (x_c, y_c) = make_step(x_c, y_c, command)
+            cs2 += abs(int(command[1:]))
+    if cs1 + cs2 < rd:
+        rd = cs1 + cs2
+        print(intersection_point)
+        print(rd)
+
+# todo 
