@@ -1,4 +1,4 @@
-def is_increasing(x: int):
+def is_increasing(x: int) -> bool:
     x = list(str(x))
 
     valid = 0
@@ -11,7 +11,7 @@ def is_increasing(x: int):
         return False
 
 
-def is_valid(x: int):
+def is_valid(x: int) -> bool:
     condition1 = len(str(x)) == 6
     condition2 = len(set(list(str(x)))) < 6
     condition3 = is_increasing(x)
@@ -54,7 +54,7 @@ assert is_valid_2(111122) == True
 result2 = 0
 for i in range(372037, 905157 + 1):
     if is_valid_2(i):
-        result += 1
+        result2 += 1
 
 
 print("Part 2:", result2)
