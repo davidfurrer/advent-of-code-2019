@@ -1,3 +1,6 @@
+# day 8
+
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -57,4 +60,6 @@ for x in range(A.shape[0]):
 plt.matshow(R)
 plt.savefig("result.png", bbox_inches="tight")
 plt.close()
+```
 
+![](result.png)
