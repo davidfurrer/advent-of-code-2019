@@ -35,7 +35,7 @@ def make_step(x, y, c):
 
 print(make_step(1, 3, "U4"))
 
-points_visited = list()
+points_visited = []
 
 for command in df.w1:
     x_c, y_c = make_step(x_c, y_c, command)
@@ -43,7 +43,7 @@ for command in df.w1:
 
 print(points_visited)
 
-additional_points = list()
+additional_points = []
 for point1, point2 in zip(points_visited[:-1], points_visited[1:]):
     x1, y1 = point1
     x2, y2 = point2
@@ -54,7 +54,7 @@ print(additional_points)
 
 
 
-points_visited = list()
+points_visited = []
 x_c = 0
 y_c = 0
 for command in df.w2:
@@ -63,14 +63,14 @@ for command in df.w2:
 
 print(points_visited)
 
-additional_points2 = list()
+additional_points2 = []
 for point1, point2 in zip(points_visited[:-1], points_visited[1:]):
     x1, y1 = point1
     x2, y2 = point2
     additional_points2 += points_on_line(x1, y1, x2, y2)
 
 
-intersection_points = list(set(additional_points) & set(additional_points2)) 
+intersection_points = list(set(additional_points) & set(additional_points2))
 print(intersection_points)
 
 d2 = 1000000000
