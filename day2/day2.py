@@ -24,12 +24,8 @@ def run_program(im, jm):
             elif j == 2:
                 ii_ = pl[i + 3]
                 pl[ii_] = pl[pl[i + 1]] * pl[pl[i + 2]]
-            elif j == 99:
-                return pl[0]
-                break
             else:
                 return pl[0]
-                break
     return pl[0]
 
 
